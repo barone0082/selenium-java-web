@@ -1,0 +1,28 @@
+package testes;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+
+import conexao.ConexaoWeb;
+
+public class ex3 {
+	
+	
+	
+	public void itensNoCarrinho(){
+	ConexaoWeb auxdriver = new ConexaoWeb();
+	
+	WebDriver driver = auxdriver.conexao();
+		
+		driver.get("http://eliasnogueira.com/arquivos_blog/selenium/desafio/3desafio/drag_and_drop/demo.php");
+		content drag-desired
+		img1 = driver.findElement(By.xpath("//div[@class='content drag-desired']/div[@class='produto']")[0]));
+		WebElement img2
+		WebElement img3
+		WebElement img4
+		WebElement img5
+		WebElement img6
+		
+	}
+
+}

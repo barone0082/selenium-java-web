@@ -1,0 +1,20 @@
+package ex2;
+
+
+
+import org.openqa.selenium.WebDriver;
+
+
+
+public class ex2  {
+	
+	static WebDriver driver;
+	
+	
+	public static void  alterarDados(){
+		
+		driver.get("http://eliasnogueira.com/arquivos_blog/selenium/desafio/2desafio/");
+		
+	}
+
+}

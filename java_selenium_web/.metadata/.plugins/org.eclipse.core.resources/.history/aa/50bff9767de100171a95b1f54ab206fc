@@ -1,0 +1,39 @@
+package testes;
+
+import static org.junit.Assert.assertEquals;
+
+import org.junit.Before;
+import org.junit.Test;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.remote.CapabilityType;
+import org.openqa.selenium.remote.DesiredCapabilities;
+
+
+public class ex1 {
+	
+@Before
+public void irSite(){
+	
+	DesiredCapabilities capabilities = DesiredCapabilities.firefox();
+	  
+	capabilities.setCapability(CapabilityType.BROWSER_NAME, "firefox");
+	
+
+	System.setProperty("webdriver.gecko.driver", "C:\\Program Files\\FirefoxDriver\\geckodriver.exe");
+	  
+	 //it is used to initialize the IE driver
+	 @SuppressWarnings("deprecation")
+	WebDriver driver = new FirefoxDriver(capabilities);
+	  
+	 driver.manage().window().maximize();	
+	
+		driver.get("http://eliasnogueira.com/arquivos_blog/selenium/desafio/1desafio/");
+		//preencher();
+
+	}
+	
+	
+}

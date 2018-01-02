@@ -1,0 +1,64 @@
+package conexao;
+
+
+
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.By.ById;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.ie.InternetExplorerDriver;
+import org.openqa.selenium.remote.CapabilityType;
+import org.openqa.selenium.remote.DesiredCapabilities;
+
+
+public class Connection {
+
+	public static void main(String[] args) {
+		DesiredCapabilities capabilities = DesiredCapabilities.internetExplorer();
+		  
+		capabilities.setCapability(CapabilityType.BROWSER_NAME, "IE");
+		capabilities.setCapability(InternetExplorerDriver.
+		  INTRODUCE_FLAKINESS_BY_IGNORING_SECURITY_DOMAINS,true);
+
+
+		System.setProperty("webdriver.ie.driver", "C:\\Program Files\\IEDriverServer\\IEDriverServer.exe");
+		  
+		 //it is used to initialize the IE driver
+		 @SuppressWarnings("deprecation")
+		WebDriver driver = new InternetExplorerDriver(capabilities);
+		  
+		 driver.manage().window().maximize();
+		 	  
+		 irSite(driver);
+		// driver.quit();
+		 
+
+	}
+	
+	
+	public static void irSite(WebDriver driver){
+		
+		driver.get("http://eliasnogueira.com/arquivos_blog/selenium/desafio/1desafio/");
+	}
+	
+	
+	public static void preencher(WebDriver driver){
+		
+		String numero1 = driver.findElement(By.id("number1")).getText();
+		String numero2 = driver.findElement(By.id("number2")).getText();
+		
+		int total=0;
+		
+		total = Integer.parseInt(numero1+numero2);
+		
+		Campopreencher = driver.findElement(By.name("soma"))
+		
+		
+		submit
+		
+	}
+
+}
+
+

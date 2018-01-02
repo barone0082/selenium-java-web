@@ -1,0 +1,16 @@
+package testes;
+
+import conexao.ConexaoWeb;
+
+public class ex5 {
+
+	
+	
+	public void  preenchernomeSenha(){
+		
+		ConexaoWeb auxdiver = new ConexaoWeb();
+		
+		Webdriver driver = auxdriver
+	}
+	
+}

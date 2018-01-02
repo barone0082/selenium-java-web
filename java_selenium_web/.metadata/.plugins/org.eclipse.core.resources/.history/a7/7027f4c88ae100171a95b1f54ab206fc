@@ -1,0 +1,51 @@
+package testes;
+
+
+
+import javax.xml.xpath.XPath;
+
+import org.junit.Test;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Action;
+import org.openqa.selenium.interactions.Actions;
+
+import com.thoughtworks.selenium.webdriven.commands.DragAndDrop;
+
+import conexao.ConexaoWeb;
+
+public class ex3 {
+	
+	
+	@Test
+	public void itensNoCarrinho(){
+	ConexaoWeb auxdriver = new ConexaoWeb();
+	
+	WebDriver driver = auxdriver.conexao();
+		
+		driver.get("http://eliasnogueira.com/arquivos_blog/selenium/desafio/3desafio/drag_and_drop/demo.php");
+		
+		WebElement img1 = driver.findElement(By.xpath("//div[@class='content drag-desired']/div[@class='product']/img[@alt='iPod']"));
+		WebElement img2 = driver.findElement(By.xpath("//div[@class='content drag-desired']/div[@class='product'][1]"));
+		WebElement img3 = driver.findElement(By.xpath("//div[@class='content drag-desired']/div[@class='product'][2]"));
+		WebElement img4 = driver.findElement(By.xpath("//div[@class='content drag-desired']/div[@class='product'][3]"));
+		WebElement img5 = driver.findElement(By.xpath("//div[@class='content drag-desired']/div[@class='product'][4]"));
+		WebElement img6 = driver.findElement(By.xpath("//div[@class='content drag-desired']/div[@class='product'][5]"));
+		
+		WebElement carrinho = driver.findElement(By.xpath("//div[@id='cart-icon']/img[@alt='shopping cart']"));
+		
+		//Declarando Actions
+		
+		Actions action = new Actions(driver);
+		Action DragAndDrop=null;		
+
+		 
+		DragAndDrop = action.clickAndHold(img1).moveToElement(carrinho).release().build();
+		DragAndDrop.perform();
+
+		
+		
+	}
+
+}

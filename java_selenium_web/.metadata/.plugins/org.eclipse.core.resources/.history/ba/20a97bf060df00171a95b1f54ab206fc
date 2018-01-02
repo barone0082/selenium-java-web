@@ -1,0 +1,26 @@
+package aaaaa;
+
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.remote.DesiredCapabilities;
+
+
+public class qsssdsds {
+
+	public static void main(String[] args) {
+		DesiredCapabilities dc = DesiredCapabilities.chrome();
+		dc.addArguments("--disable-extensions");
+		dc.setBinary("C:\\Program Files\\ChromeDriver\\chromedriver.exe");
+		System.setProperty("webdriver.chrome.diver","drivers/chromedriver.exe");
+		
+		
+		WebDriver driver = new ChromeDriver();
+		driver.get("www.google.com");
+
+	}
+
+}
+
+

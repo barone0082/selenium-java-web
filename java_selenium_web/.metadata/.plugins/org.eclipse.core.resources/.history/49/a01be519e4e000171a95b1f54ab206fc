@@ -1,0 +1,19 @@
+package ex2;
+
+
+
+import org.openqa.selenium.WebDriver;
+
+import conexao.Connection;
+
+public class ex2  {
+	
+	
+	
+	public void  alterarDados(WebDriver driver){
+		
+		
+		
+	}
+
+}

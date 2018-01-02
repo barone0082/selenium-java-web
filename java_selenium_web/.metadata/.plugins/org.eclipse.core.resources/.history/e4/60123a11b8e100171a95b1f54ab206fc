@@ -1,0 +1,54 @@
+package testes;
+
+import static org.junit.Assert.assertEquals;
+
+import org.junit.Assert;
+import org.junit.Test;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
+import conexao.ConexaoWeb;
+
+public class ex4 {
+	
+@Test
+	public void preencheCampos(){
+		
+		ConexaoWeb auxdriver = new ConexaoWeb();
+		WebDriver driver = auxdriver.conexao();
+		
+		WebDriverWait wait = new WebDriverWait(driver, 20);
+		
+		
+		driver.get("http://eliasnogueira.com/arquivos_blog/selenium/desafio/4desafio/");
+		
+		WebElement cep = driver.findElement(By.id("cep"));
+		WebElement rua = driver.findElement(By.id("rua"));
+		WebElement numero = driver.findElement(By.id("numero"));
+		WebElement complemento = driver.findElement(By.id("complemento"));
+		WebElement bairro = driver.findElement(By.id("bairro"));
+		WebElement cidade = driver.findElement(By.id("cidade"));
+		WebElement estado = driver.findElement(By.id("estado"));
+		
+		cep.sendKeys("01310200");
+		numero.sendKeys("1578");
+		complemento.sendKeys("MASP");
+		wait.until(ExpectedConditions.textToBePresentInElementValue((By.id("bairro")),"Bela Vista"));
+		
+		assertEquals("Bela Vista",bairro.getText());
+		assertEquals("01310200",cep.getText());
+		
+		driver.findElement(By.class("btn btn-default"));
+
+		
+		
+		
+		
+		
+		
+	}
+	
+}

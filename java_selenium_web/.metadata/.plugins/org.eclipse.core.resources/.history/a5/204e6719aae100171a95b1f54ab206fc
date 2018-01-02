@@ -1,0 +1,17 @@
+package testes;
+
+import org.openqa.selenium.WebDriver;
+
+import conexao.ConexaoWeb;
+
+public class ex4 {
+	
+
+	public void preencheCampos(){
+		
+		ConexaoWeb auxdriver = new ConexaoWeb();
+		WebDriver driver = auxdriver.conexao();
+		
+	}
+	
+}

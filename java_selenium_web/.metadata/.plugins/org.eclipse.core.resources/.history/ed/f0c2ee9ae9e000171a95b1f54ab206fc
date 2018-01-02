@@ -1,0 +1,36 @@
+package ex2;
+
+
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+
+
+
+public class ex2  {
+	
+	
+	
+	
+	public  static void  alterarDados(WebDriver driver){
+		
+		driver.get("http://eliasnogueira.com/arquivos_blog/selenium/desafio/2desafio/");
+		
+		WebElement elemento1 = driver.findElement(By.id("name_rg_display_section"));
+		elemento1.click();
+		
+		driver.findElement(By.id("nome_pessoa")).sendKeys("MUDEI O NOME");
+		
+		driver.findElement(By.xpath(/div[@id="email_rg_display_section"]/input [@value="Salvar"]);
+		
+		WebElement elemento2 = driver.findElement(By.id("email_rg_display_section"));
+		
+		elemento2.click();
+		
+		
+		
+		
+	}
+
+}

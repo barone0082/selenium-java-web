@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="src" path="lib"/>
+	<classpathentry excluding="src/|lib/" kind="src" path=""/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.7"/>
+	<classpathentry kind="lib" path="C:/Users/Inmetrics/Desktop/Selenium/selenium-java-3.8.1.zip"/>
+	<classpathentry kind="lib" path="C:/Users/Inmetrics/Desktop/IEDriverServer_x64_3.8.0.zip"/>
+	<classpathentry kind="lib" path="lib/selenium-html-runner-3.8.0.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>
