@@ -1,0 +1,15 @@
+package testes;
+
+import conexao.ConexaoWeb;
+
+public class ex4 {
+	WebDriver auxdriver;
+ConexaoWeb auxdriver = new ConexaoWeb();
+driver = auxdriver.conexao();
+	
+	public void preencheCampos(){
+		
+		
+	}
+	
+}

@@ -1,0 +1,18 @@
+package testes;
+
+import conexao.ConexaoWeb;
+
+public class ex3 {
+	
+	
+	
+	public void itensNoCarrinho(){
+	ConexaoWeb auxdriver = new ConexaoWeb();
+	
+	driver = auxdriver.conexao()
+		
+		http://eliasnogueira.com/arquivos_blog/selenium/desafio/3desafio/drag_and_drop/demo.php
+		
+	}
+
+}

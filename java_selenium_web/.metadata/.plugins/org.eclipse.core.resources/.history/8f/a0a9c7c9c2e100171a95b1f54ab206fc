@@ -1,0 +1,22 @@
+package testes;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+
+import conexao.ConexaoWeb;
+
+public class ex5 {
+
+	
+	
+	public void  preenchernomeSenha(){
+		
+		ConexaoWeb auxdriver = new ConexaoWeb();
+		
+		WebDriver driver = auxdriver.conexao();
+		
+		driver.findElement(By.xpath("//div[@class='input-container'][0]")).sendKeys("testePrimeiro");
+	
+	}
+	
+}

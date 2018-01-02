@@ -1,0 +1,18 @@
+package testes;
+
+import org.openqa.selenium.WebDriver;
+
+import conexao.ConexaoWeb;
+
+public class ex5 {
+
+	
+	
+	public void  preenchernomeSenha(){
+		
+		ConexaoWeb auxdiver = new ConexaoWeb();
+		
+		WebDriverer driver = auxdriver
+	}
+	
+}

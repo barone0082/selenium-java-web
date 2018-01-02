@@ -1,0 +1,32 @@
+package testes;
+
+import org.junit.Test;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+
+import conexao.ConexaoWeb;
+
+public class ex4 {
+	
+@Test
+	public void preencheCampos(){
+		
+		ConexaoWeb auxdriver = new ConexaoWeb();
+		WebDriver driver = auxdriver.conexao();
+		
+		driver.get("http://eliasnogueira.com/arquivos_blog/selenium/desafio/4desafio/");
+		
+		WebElement cep = driver.findElement(By.id("cep"));
+		WebElement rua = driver.findElement(By.id("rua"));
+		WebElement numero = driver.findElement(By.id("numero"));
+		WebElement complemento = driver.findElement(By.id("complemento"));
+		WebElement bairro = driver.findElement(By.id("bairro"));
+		WebElement cidade = driver.findElement(By.id("cidade"));
+		WebElement estado = driver.findElement(By.id("estado"));
+		
+		
+		
+	}
+	
+}

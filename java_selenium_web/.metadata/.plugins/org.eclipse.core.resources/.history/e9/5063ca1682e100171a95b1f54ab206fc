@@ -1,0 +1,20 @@
+package testes;
+
+import org.openqa.selenium.WebDriver;
+
+import conexao.ConexaoWeb;
+
+public class ex3 {
+	
+	
+	
+	public void itensNoCarrinho(){
+	ConexaoWeb auxdriver = new ConexaoWeb();
+	
+	WebDriver driver = auxdriver.conexao();
+		
+		driver.get("http://eliasnogueira.com/arquivos_blog/selenium/desafio/3desafio/drag_and_drop/demo.php");
+		
+	}
+
+}

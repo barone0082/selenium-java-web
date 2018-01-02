@@ -1,0 +1,46 @@
+package testes;
+
+import org.junit.Test;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
+import conexao.ConexaoWeb;
+
+public class ex5 {
+
+	
+	@Test
+	public void  preenchernomeSenha(){
+		
+		ConexaoWeb auxdriver = new ConexaoWeb();
+		WebDriver driver = auxdriver.conexao();
+		WebDriverWait wait = new WebDriverWait(driver,20);
+		
+		driver.get("http://eliasnogueira.com/arquivos_blog/selenium/desafio/5desafio/");
+	
+		//expected
+		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//div[@class='form-row']/label[text() = 'Username']/following-sibling::div/input")));
+		
+		//mapeando elementos
+		WebElement nome1 = driver.findElement(By.xpath("//div[@class='form-row']/label[@text() = 'Username']/following-sibling::div/input"));
+		WebElement nome2 = driver.findElement(By.xpath("//div[@class='form-row']/label[@text()='Username (repetir)'/following-sibling::div/input]"));
+		WebElement senha1 = driver.findElement(By.xpath("//div[@class='form-row']/label[@text()='Password'/following-sibling::div/input]"));
+		WebElement senha2 = driver.findElement(By.xpath("//div[@class='form-row']/label[@text()='Password (repetir)'/following-sibling::div/input]"));
+		WebElement enviar = driver.findElement(By.id("submitBtn2"));
+		
+		//açoes
+		nome1.sendKeys("Teste1");
+		nome2.sendKeys("Teste");
+		senha1.sendKeys("senha");
+		senha2.sendKeys("senha");
+		enviar.click();
+		assertequals(ExpectedConditions.textToBePresentInElement(element, text))
+		
+		
+		//validacao
+	}
+	
+}

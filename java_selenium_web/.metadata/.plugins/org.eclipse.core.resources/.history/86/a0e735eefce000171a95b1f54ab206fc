@@ -1,0 +1,48 @@
+package testes;
+
+import static org.junit.Assert.assertEquals;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+
+public class ex1 {
+
+	
+public static void irSite(WebDriver driver) {
+		
+		driver.get("http://eliasnogueira.com/arquivos_blog/selenium/desafio/1desafio/");
+		
+		preencher(driver);
+		
+	}
+	
+	
+	
+	
+	public static void preencher(WebDriver driver){
+		
+		String numero1 = driver.findElement(By.id("number1")).getText();
+		String numero2 = driver.findElement(By.id("number2")).getText();
+			
+			int total=0;
+			
+			total = Integer.parseInt(numero1)+Integer.parseInt(numero2);
+			
+			
+			WebElement Campopreencher = driver.findElement(By.name("soma"));
+			
+			
+			Campopreencher.click();
+			Campopreencher.sendKeys(String.valueOf(total));
+			
+			driver.findElement(By.name("submit")).click();
+			
+			assertEquals("CORRETO",driver.findElement(By.id("resultado")).getText());
+		
+		
+		
+//			ex2.alterarDados(driver);
+		
+	}
+}
